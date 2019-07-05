@@ -74,8 +74,7 @@ ol {
 }
 
 .header-section {
-  border: 1px solid blue;
-  background-color: rgba(173, 97, 21, 0.75);
+
   position: absolute;
 	padding: 0 0;
 	right: 0;
@@ -87,20 +86,28 @@ ol {
 .logo {
 	float: left;
 	display: inline-block;
-  max-width: 20%;
+	max-width: 20%;
+	border: 1px solid blue;
 }
 
 .logo a img {
   height: 22%;
   width: 22%;
   padding: 8% 20%;
+	filter: brightness(0) invert(1);
 }
+
+.logo a img:hover {
+	filter: brightness(0);
+}
+
 
 .main-menu {
 	float: right;
 	display: inline-block;
   margin-top: 1.3%;
   padding-top: 1%;
+	border: 1px solid blue;
 }
 
 .main-menu li {
@@ -117,17 +124,22 @@ ol {
 	padding: 4px 5px;
 }
 
+.main-menu li a:hover {
+  color: black;
+}
+
+
 .top-social {
 	display: inline-block;
-	margin-left: 120px;
+	margin-left: 100px;
 }
 
 .top-social a {
 	display: inline-block;
 	color: #fff;
-	font-size: 16px;
+	font-size: 20px;
 	margin-left: 2px;
-	padding: 3px 3px;
+	padding: 3px 8px;
 	border: 2px solid transparent;
 	width: 32px;
   height: 32px;
@@ -138,7 +150,7 @@ ol {
 }
 
 .top-social a:hover {
-	border: 2px solid #fff;
+	color: black;
 }
 
 .background-color {
@@ -146,11 +158,10 @@ ol {
   background-color: rgba(173, 97, 21, 0.75);
   position: absolute;
   right: 0;
-  top: 12.5%;
+  top: 0;
   width: 100%;
-  height: 70%;
+  height: 90%;
 }
-
 
 .background-text h2, h1{
   color: #fff;
@@ -159,18 +170,23 @@ ol {
 }
 
 .background-text h2 {
-  padding-top: 14%;
-}
-
-.main-menu li a:hover {
-  text-decoration: underline;
-  outline: none;
+  padding-top: 22%;
 }
 
 .bg-image {
   position: absolute;
   left: 0;
   top: 0;
+	width: 100%;
+	height: 100%;
   z-index: -99;
-  background-size: cover;
+  background-size: contain;
+	resize: both;
+	overflow: scroll;
+}
+
+.bg-image img {
+	position: absolute;
+	padding-top: 6.5%;
+	transform: scale(1.5);
 }
